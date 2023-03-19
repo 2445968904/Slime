@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "Slime_Backpack.generated.h"
+#include "SlimeAttributeHelper.generated.h"
 
 
-UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class SLIME_API USlime_Backpack : public UActorComponent
+UCLASS( Blueprintable,ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+class SLIME_API USlimeAttributeHelper : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	USlime_Backpack();
+	USlimeAttributeHelper();
 
 protected:
 	// Called when the game starts
