@@ -1,0 +1,178 @@
+[
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Plugins\\BaseGrassSystem\\Source\\BaseGrassSystem\\BaseGrassSystem.Build.cs",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\BaseGrassSystem.21.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Plugins\\BaseGrassSystem\\Source\\BaseGrassSystem\\Private\\BaseGrassSystem.cpp",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\BaseGrassSystem.21.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Plugins\\BaseGrassSystem\\Source\\BaseGrassSystem\\Public\\BaseGrassSystem.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\BaseGrassSystem.21.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\Component\\SlimeAttributeHelper.cpp",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\Component\\SlimeAttributeHelper.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\Component\\Slime_Backpack.cpp",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\Component\\Slime_Backpack.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\main\\SlimePlayerCameraManager.cpp",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\main\\SlimePlayerCameraManager.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\main\\SlimePlayerController.cpp",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\main\\SlimePlayerController.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\main\\Slime_Base.cpp",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Character\\main\\Slime_Base.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Game\\SlimeGameBase.cpp",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Game\\SlimeGameBase.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Slime.Build.cs",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Slime.cpp",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\Slime.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\library\\Slime_EnumLibrary.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\library\\Slime_FunctionLibrary.cpp",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\library\\Slime_FunctionLibrary.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Source\\Slime\\library\\Slime_SturctLibrary.h",
+		"arguments": [
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\Swox\\Documents\\GitHub\\Slime\\.vscode\\compileCommands_Default\\Slime.256.rsp"
+		],
+		"directory": "D:\\UE_5.1\\Engine\\Source"
+	}
+]

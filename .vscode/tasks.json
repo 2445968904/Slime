@@ -1,0 +1,437 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Slime Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Debug",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Debug",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Slime Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Debug",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Slime Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Development",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Development",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Slime Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Development",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Test",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Test",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Slime Win64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Test",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Slime Win64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "Slime Win64 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Slime",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "SlimeEditor Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SlimeEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "SlimeEditor Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SlimeEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SlimeEditor Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "SlimeEditor Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SlimeEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "SlimeEditor Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SlimeEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "SlimeEditor Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SlimeEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SlimeEditor Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "SlimeEditor Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SlimeEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "SlimeEditor Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SlimeEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "SlimeEditor Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SlimeEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SlimeEditor Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		},
+		{
+			"label": "SlimeEditor Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SlimeEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\Swox\\Documents\\GitHub\\Slime\\Slime.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.1"
+			}
+		}
+	]
+}
