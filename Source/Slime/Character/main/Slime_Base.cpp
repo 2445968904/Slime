@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Character/main/Slime_Base.h"
+#include "Slime_Base.h"
 
 // Sets default values
 ASlime_Base::ASlime_Base()
