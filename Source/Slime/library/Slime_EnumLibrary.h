@@ -10,9 +10,10 @@
 UENUM(BlueprintType)
 enum class EElement : uint8
 {
-	Grass,
-	Water,
-	Fire
+	None =0 ,
+	Grass = 1 UMETA(DisplayName = "Grass"),
+	Water =2 UMETA(DisplayName = "Water"),
+	Fire = 3 UMETA(DisplayName = "Fire"),
 };
 
 

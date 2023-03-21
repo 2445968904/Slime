@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "slime/library/Slime_SturctLibrary.h"
+#include "Slime/Character/Component/SlimeAttributeHelper.h"
 #include "Slime_Base.generated.h"
 
 UCLASS()
@@ -26,4 +28,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Components")
+	USlimeAttributeHelper* SlimeAttributeHelper;
+	
 };

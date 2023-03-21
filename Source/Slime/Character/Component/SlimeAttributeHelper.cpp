@@ -32,3 +32,55 @@ void USlimeAttributeHelper::TickComponent(float DeltaTime, ELevelTick TickType, 
 	// ...
 }
 
+void USlimeAttributeHelper::AttributeCalculate_Implementation(FSlimeAttribute Now , FSlimeAttribute Want)
+{
+	
+	if(Now.Element!=Want.Element)
+	{
+		//火加上草
+		if(Now.Element==EElement::Fire&&Want.Element==EElement::Grass)
+		{
+			ConcentrationChange(Want.Concentration*Restrained);
+		}
+		//草加上火
+		else if(Now.Element==EElement::Grass&&Want.Element==EElement::Fire)
+		{
+			ConcentrationChange(Want.Concentration*UnRestrained);
+		}
+		//水加上火
+		else if(Now.Element==EElement::Water&&Want.Element==EElement::Fire)
+		{
+			ConcentrationChange(Want.Concentration*Restrained);
+		}
+		//火加上水
+		else if(Now.Element==EElement::Fire&&Want.Element==EElement::Water)
+		{
+			ConcentrationChange(Want.Concentration*UnRestrained);
+		}
+		//水加上草
+		else if(Now.Element==EElement::Water&&Want.Element==EElement::Grass)
+		{
+			ConcentrationChange(Want.Concentration*UnRestrained);
+		}
+		//草加上水
+		else if(Now.Element==EElement::Grass&&Want.Element==EElement::Water)
+		{
+			ConcentrationChange(Want.Concentration*Restrained);
+		}
+	}
+	else
+	{
+		ConcentrationChange(Want.Concentration);
+	}
+}
+
+void USlimeAttributeHelper::ConcentrationChange_Implementation(float ConcentAdd)
+{
+
+	
+}
+void USlimeAttributeHelper::ElementChange_Implementation(EElement Now,EElement Want)
+{
+	
+}
+
