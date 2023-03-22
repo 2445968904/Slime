@@ -17,3 +17,12 @@ struct FSlimeAttribute
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Concentration")
 	float Concentration;
 };
+
+USTRUCT(BlueprintType)
+struct FContinuedElement_Struct
+{
+	GENERATED_BODY()
+	FSlimeAttribute ValueUpdate;
+	float UpdateTime;
+	float TargetTime;
+};
