@@ -18,7 +18,7 @@ USlimeAttributeHelper::USlimeAttributeHelper()
 void USlimeAttributeHelper::BeginPlay()
 {
 	Super::BeginPlay();
-
+	ElementUpdate.Broadcast();
 	// ...
 	
 }

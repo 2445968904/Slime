@@ -9,6 +9,24 @@
 
 UDELEGATE(BlueprintAuthorityOnly)
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FUpdateAttribute);
+UDELEGATE(BlueprintAuthorityOnly)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FFireWithGrass);
+UDELEGATE(BlueprintAuthorityOnly)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FGrassWithFire);
+UDELEGATE(BlueprintAuthorityOnly)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWaterWithFire);
+UDELEGATE(BlueprintAuthorityOnly)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FFireWithWater);
+UDELEGATE(BlueprintAuthorityOnly)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FGrassWithWater);
+UDELEGATE(BlueprintAuthorityOnly)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWaterWithGrass);
+UDELEGATE(BlueprintAuthorityOnly)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FNormalElementEvent);
+UDELEGATE(BlueprintAuthorityOnly)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FElementUpdate);
+UDELEGATE(BlueprintAuthorityOnly)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FConcentrationUpdate);
 
 UCLASS( Blueprintable,ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SLIME_API USlimeAttributeHelper : public UActorComponent
@@ -50,4 +68,10 @@ public:
 
 	UPROPERTY(BlueprintAssignable)
 	FUpdateAttribute UpdateAttribute;
+
+	UPROPERTY(BlueprintAssignable)
+	FElementUpdate ElementUpdate;
+	
+	UPROPERTY(BlueprintAssignable)
+	FConcentrationUpdate ConcentrationUpdate;
 };
