@@ -68,8 +68,8 @@ void USlimeAttributeHelper::AttributeCalculate_Implementation( FSlimeAttribute W
 		{
 			ConcentrationChange(Want.Concentration*Restrained*-1);
 		}
-		
-
+        else if(NowElement.Element==EElement::None)		
+		ConcentrationChange(Want.Concentration*UnRestrained);
 		
 		UpdateElement(Want.Element);
 	}
@@ -91,6 +91,12 @@ void USlimeAttributeHelper::ElementChange_Implementation(EElement Want)
 
 void USlimeAttributeHelper::UpdateElement(EElement Element)
 {
+	if(NowElement.Element==EElement::None)
+	{
+		NowElement.Element=Element;
+		ElementUpdate_Delegate.Broadcast();
+		return ;
+	}
 	if(NowElement.Concentration==0)
 	{
 		if(NowElement.Element!=EElement::None)
