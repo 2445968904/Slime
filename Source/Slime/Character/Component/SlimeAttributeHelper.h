@@ -62,10 +62,10 @@ public:
 	void ElementChange_Implementation(EElement Want);
 
 	//克制
-	UPROPERTY(VisibleAnywhere,BlueprintReadWrite)
-	float Restrained = 2.0f;
-	UPROPERTY(VisibleAnywhere,BlueprintReadWrite)
-	float UnRestrained = 0.5f;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float Restrained = 1.0f;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float UnRestrained = 1.0f;
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	FSlimeAttribute NowElement ;
@@ -79,15 +79,19 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FConcentrationUpdate ConcentrationUpdate_Delegate;
 
+	UFUNCTION()
+	void UpdateElement(EElement Element);
+
+	UFUNCTION(BlueprintCallable)
+	void ReduceAttribute(float ReduceNumber);
 	
-		
 	//持续的元素叠加操作
 	UFUNCTION(BlueprintCallable)
 	void MakeContinuedAttribute(FSlimeAttribute ContinuedElement,float Time);
 
 	TArray<FContinuedElement_Struct*> ContinuedElements;
 	
-	UPROPERTY(VisibleAnywhere,BlueprintReadWrite)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	float TheNumberOfUpdate=0.1f;
 
 	FTimerHandle ContinuedElementsHandle;

@@ -41,33 +41,37 @@ void USlimeAttributeHelper::AttributeCalculate_Implementation( FSlimeAttribute W
 		//火加上草
 		if(NowElement.Element==EElement::Fire&&Want.Element==EElement::Grass)
 		{
-			ConcentrationChange(Want.Concentration*Restrained);
+			ConcentrationChange(Want.Concentration*Restrained*-1);
 		}
 		//草加上火
 		else if(NowElement.Element==EElement::Grass&&Want.Element==EElement::Fire)
 		{
-			ConcentrationChange(Want.Concentration*UnRestrained);
+			ConcentrationChange(Want.Concentration*UnRestrained*-1);
 		}
 		//水加上火
 		else if(NowElement.Element==EElement::Water&&Want.Element==EElement::Fire)
 		{
-			ConcentrationChange(Want.Concentration*Restrained);
+			ConcentrationChange(Want.Concentration*Restrained*-1);
 		}
 		//火加上水
 		else if(NowElement.Element==EElement::Fire&&Want.Element==EElement::Water)
 		{
-			ConcentrationChange(Want.Concentration*UnRestrained);
+			ConcentrationChange(Want.Concentration*UnRestrained*-1);
 		}
 		//水加上草
 		else if(NowElement.Element==EElement::Water&&Want.Element==EElement::Grass)
 		{
-			ConcentrationChange(Want.Concentration*UnRestrained);
+			ConcentrationChange(Want.Concentration*UnRestrained*-1);
 		}
 		//草加上水
 		else if(NowElement.Element==EElement::Grass&&Want.Element==EElement::Water)
 		{
-			ConcentrationChange(Want.Concentration*Restrained);
+			ConcentrationChange(Want.Concentration*Restrained*-1);
 		}
+		
+
+		
+		UpdateElement(Want.Element);
 	}
 	else
 	{
@@ -85,15 +89,47 @@ void USlimeAttributeHelper::ElementChange_Implementation(EElement Want)
 	
 }
 
+void USlimeAttributeHelper::UpdateElement(EElement Element)
+{
+	if(NowElement.Concentration==0)
+	{
+		if(NowElement.Element!=EElement::None)
+		NowElement.Element=EElement::None;
+		else
+			NowElement.Element=Element;
+		ElementUpdate_Delegate.Broadcast();
+	}
+	else if(NowElement.Concentration<0)
+	{
+		NowElement.Element=Element;
+		NowElement.Concentration*=-1.0f;
+		ConcentrationUpdate_Delegate.Broadcast();
+		ElementUpdate_Delegate.Broadcast();
+	}
+}
+
+void USlimeAttributeHelper::ReduceAttribute(float ReduceNumber)
+{
+	ConcentrationChange(ReduceNumber);
+}
+
 void USlimeAttributeHelper::MakeContinuedAttribute(FSlimeAttribute ContinuedElement, float Time)
 {
-	FContinuedElement_Struct Children;
+	
+	
+	FContinuedElement_Struct *Children=new FContinuedElement_Struct;
 	float con=ContinuedElement.Concentration*TheNumberOfUpdate/Time;
-	Children.ValueUpdate.Concentration=con;
-	Children.ValueUpdate.Element=ContinuedElement.Element;
-	Children.UpdateTime=0.0f;
-	Children.TargetTime=Time;
-	ContinuedElements.Add(&Children);
+
+	GEngine->AddOnScreenDebugMessage
+			(
+				2, 5.0f, FColor::Red, FString::Printf(TEXT("%lf"),con)
+					);
+	
+	Children->ValueUpdate.Concentration=con;
+	Children->ValueUpdate.Element=ContinuedElement.Element;
+	Children->UpdateTime=0.0f;
+	Children->TargetTime=Time;
+	ContinuedElements.Add(Children);
 	//AActor::GetWorldTimerManager().SetTimer()
 	if(!ContinuedElementsHandle.IsValid())
 	GetWorld()->GetTimerManager().SetTimer(ContinuedElementsHandle, this, &USlimeAttributeHelper::UpdateAttribute_Continued, TheNumberOfUpdate, true);
@@ -107,6 +143,20 @@ void USlimeAttributeHelper::MakeContinuedAttribute(FSlimeAttribute ContinuedElem
 		}
 		GetWorld()->GetTimerManager().ClearTimer(ContinuedElementsHandle);
 		GetWorld()->GetTimerManager().SetTimer(ContinuedElementsHandle, this, &USlimeAttributeHelper::UpdateAttribute_Continued, TheNumberOfUpdate, true);
+	}
+	if(ContinuedElements.IsEmpty())
+	{
+		GEngine->AddOnScreenDebugMessage
+			(
+				0, 5.0f, FColor::Yellow, (TEXT("NoMember"))
+					);
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage
+			(
+				0, 5.0f, FColor::Yellow, TEXT("HaveMember"),false
+					);
 	}
 }
 
@@ -122,7 +172,15 @@ void USlimeAttributeHelper::UpdateAttribute_Continued()
 			Element=It->ValueUpdate.Element;
 		
 		Con+=It->ValueUpdate.Concentration*(ContinuedCalculateNumber(Element,It->ValueUpdate.Element));
-		
+
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage
+			(
+				2, 5.0f, FColor::Yellow, FString::Printf(TEXT("%lf"),ContinuedCalculateNumber(Element,It->ValueUpdate.Element))
+					);
+					
+		}
 		if(Con<0)
 		{
 			Element=It->ValueUpdate.Element;
@@ -139,8 +197,9 @@ void USlimeAttributeHelper::UpdateAttribute_Continued()
 	}
 	if (GEngine)
 	{
-		GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Yellow, FString::Printf(TEXT("%lf"), Con));
+		GEngine->AddOnScreenDebugMessage(1, 5.0f, FColor::Yellow, FString::Printf(TEXT("%lf"), Con));
 	}
+	
 	for(auto &It : ContinuedElements_local)
 	ContinuedElements.Remove(It);
 	
