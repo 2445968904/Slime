@@ -144,7 +144,7 @@ void USlimeAttributeHelper::MakeContinuedAttribute(FSlimeAttribute ContinuedElem
 		float maxtime=Time;
 		for (auto It : ContinuedElements)
 		{
-			if(Time>(It->TargetTime-It->UpdateTime))
+			if(Time<(It->TargetTime-It->UpdateTime))
 				Time=It->TargetTime-It->UpdateTime;
 		}
 		GetWorld()->GetTimerManager().ClearTimer(ContinuedElementsHandle);
@@ -179,14 +179,14 @@ void USlimeAttributeHelper::UpdateAttribute_Continued()
 		
 		Con+=It->ValueUpdate.Concentration*(ContinuedCalculateNumber(Element,It->ValueUpdate.Element));
 
-		if (GEngine)
+		/*if (GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage
 			(
 				2, 5.0f, FColor::Yellow, FString::Printf(TEXT("%lf"),ContinuedCalculateNumber(Element,It->ValueUpdate.Element))
 					);
 					
-		}
+		}*/
 		if(Con<0)
 		{
 			Element=It->ValueUpdate.Element;
@@ -201,10 +201,12 @@ void USlimeAttributeHelper::UpdateAttribute_Continued()
 		if(It->UpdateTime>=It->TargetTime)
 			ContinuedElements_local.Add(It);
 	}
+	/*
 	if (GEngine)
 	{
 		GEngine->AddOnScreenDebugMessage(1, 5.0f, FColor::Yellow, FString::Printf(TEXT("%lf"), Con));
 	}
+	*/
 	
 	for(auto &It : ContinuedElements_local)
 	ContinuedElements.Remove(It);
