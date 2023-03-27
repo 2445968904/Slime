@@ -10,7 +10,7 @@
  * 
  */
 UCLASS(Blueprintable, meta = (BlueprintSpawnableComponent))
-class HITBOXCOMPONENT_API UHBoxComponent : public UBoxComponent
+class SLIME_API UHBoxComponent : public UBoxComponent
 {
 	GENERATED_BODY()
 	

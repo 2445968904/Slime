@@ -54,7 +54,7 @@ struct FHitTraceResult
 
 
 UCLASS()
-class HITBOXCOMPONENT_API AHitTrace_Base : public AActor
+class SLIME_API AHitTrace_Base : public AActor
 {
 	GENERATED_BODY()
 	
