@@ -79,3 +79,8 @@ DerivedDataCache/*
 ../.idea/
 
 *.rsp
+.vscode/c_cpp_properties.json
+.vscode/compileCommands_Default.json
+.vscode/compileCommands_Slime.json
+.vscode/launch.json
+.vscode/tasks.json
