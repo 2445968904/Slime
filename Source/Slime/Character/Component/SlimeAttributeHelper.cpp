@@ -5,6 +5,7 @@
 
 // Sets default values for this component's properties
 USlimeAttributeHelper::USlimeAttributeHelper()
+
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -19,9 +20,11 @@ void USlimeAttributeHelper::BeginPlay()
 {
 	Super::BeginPlay();
 	ElementUpdate_Delegate.Broadcast();
-	ConcentrationUpdate_Delegate.Broadcast();
+	ConcentrationUpdate_Delegate.Broadcast(true);
+	ConcentrationUpdate_Delegate.AddDynamic(this,&USlimeAttributeHelper::CallWhenConcentrationChange);
 	// ...
-	
+	FTimerHandle a;
+	GetWorld()->GetTimerManager().SetTimer(a, this,&USlimeAttributeHelper::AutoAddConcentration, TheNumberOfUpdate,true);
 }
 
 
@@ -82,7 +85,12 @@ void USlimeAttributeHelper::AttributeCalculate_Implementation( FSlimeAttribute W
 void USlimeAttributeHelper::ConcentrationChange_Implementation(float ConcentDown)
 {
 	NowElement.Concentration+=ConcentDown;
-	ConcentrationUpdate_Delegate.Broadcast();
+	if(ConcentDown<0)
+	ConcentrationUpdate_Delegate.Broadcast(false);
+	else
+	ConcentrationUpdate_Delegate.Broadcast(true);
+	if(NowElement.Concentration<=0)
+		ElementUpdate_Delegate.Broadcast();
 }
 void USlimeAttributeHelper::ElementChange_Implementation(EElement Want)
 {
@@ -109,7 +117,7 @@ void USlimeAttributeHelper::UpdateElement(EElement Element)
 	{
 		NowElement.Element=Element;
 		NowElement.Concentration*=-1.0f;
-		ConcentrationUpdate_Delegate.Broadcast();
+		ConcentrationUpdate_Delegate.Broadcast(false);
 		ElementUpdate_Delegate.Broadcast();
 	}
 }
@@ -241,5 +249,33 @@ float USlimeAttributeHelper::ContinuedCalculateNumber(EElement Now, EElement Add
 		return 0.0f;
 }
 
+void USlimeAttributeHelper::AutoAddConcentration()
+{
+	if(NowElement.Concentration>=MaxAddConcentration)
+		return ;
+	if(canAutoAddConcentration)
+	{
+		NowElement.Concentration+=AutoOnceAdd;
+		ConcentrationUpdate_Delegate.Broadcast(true);
+	}
+		
+}
+
+void USlimeAttributeHelper::CallWhenConcentrationChange(bool isAdd)
+{
+	if(isAdd)
+	return ;
+	else
+	{
+		canAutoAddConcentration=false;
+		GetWorld()->GetTimerManager().ClearTimer(ConcentrationHandle);
+		GetWorld()->GetTimerManager().SetTimer(ConcentrationHandle, this, &USlimeAttributeHelper::SetCanAutoAddConcentration,AutoAddTime, false);
+	}
+}
+void USlimeAttributeHelper::SetCanAutoAddConcentration()
+{
+	canAutoAddConcentration=true;
+	return ;
+}
 
 

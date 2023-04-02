@@ -26,7 +26,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FNormalElementEvent);
 UDELEGATE(BlueprintAuthorityOnly)
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FElementUpdate);
 UDELEGATE(BlueprintAuthorityOnly)
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FConcentrationUpdate);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FConcentrationUpdate,bool,IsAdd);
 
 
 
@@ -101,4 +101,29 @@ public:
 
 	UFUNCTION()
 	float ContinuedCalculateNumber(EElement Now,EElement Add);
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float MaxAddConcentration=100.0f;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	bool UseAutoConcentrationAdd;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float AutoAddTime=5.0f;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float AutoOnceAdd=1.0f;
+	
+	UPROPERTY()
+	bool canAutoAddConcentration=true;
+	
+	UFUNCTION()
+	void AutoAddConcentration();
+
+	UFUNCTION()
+	void CallWhenConcentrationChange(bool IsAdd);
+
+	FTimerHandle ConcentrationHandle;
+	UFUNCTION()
+	void SetCanAutoAddConcentration();
 };
