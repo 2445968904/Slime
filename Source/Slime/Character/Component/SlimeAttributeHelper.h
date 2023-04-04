@@ -126,4 +126,10 @@ public:
 	FTimerHandle ConcentrationHandle;
 	UFUNCTION()
 	void SetCanAutoAddConcentration();
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	bool HaveMaxConcentrationLimit=false;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float MaxConcentrationLimit=100.0f;
 };

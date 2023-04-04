@@ -85,6 +85,9 @@ void USlimeAttributeHelper::AttributeCalculate_Implementation( FSlimeAttribute W
 void USlimeAttributeHelper::ConcentrationChange_Implementation(float ConcentDown)
 {
 	NowElement.Concentration+=ConcentDown;
+	if(HaveMaxConcentrationLimit)
+		if(NowElement.Concentration>MaxConcentrationLimit)
+			NowElement.Concentration=MaxConcentrationLimit;
 	if(ConcentDown<0)
 	ConcentrationUpdate_Delegate.Broadcast(false);
 	else
