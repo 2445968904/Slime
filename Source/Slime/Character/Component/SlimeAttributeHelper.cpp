@@ -137,10 +137,7 @@ void USlimeAttributeHelper::MakeContinuedAttribute(FSlimeAttribute ContinuedElem
 	FContinuedElement_Struct *Children=new FContinuedElement_Struct;
 	float con=ContinuedElement.Concentration*TheNumberOfUpdate/Time;
 
-	GEngine->AddOnScreenDebugMessage
-			(
-				2, 5.0f, FColor::Red, FString::Printf(TEXT("%lf"),con)
-					);
+	
 	
 	Children->ValueUpdate.Concentration=con;
 	Children->ValueUpdate.Element=ContinuedElement.Element;
@@ -161,20 +158,7 @@ void USlimeAttributeHelper::MakeContinuedAttribute(FSlimeAttribute ContinuedElem
 		GetWorld()->GetTimerManager().ClearTimer(ContinuedElementsHandle);
 		GetWorld()->GetTimerManager().SetTimer(ContinuedElementsHandle, this, &USlimeAttributeHelper::UpdateAttribute_Continued, TheNumberOfUpdate, true);
 	}
-	if(ContinuedElements.IsEmpty())
-	{
-		GEngine->AddOnScreenDebugMessage
-			(
-				0, 5.0f, FColor::Yellow, (TEXT("NoMember"))
-					);
-	}
-	else
-	{
-		GEngine->AddOnScreenDebugMessage
-			(
-				0, 5.0f, FColor::Yellow, TEXT("HaveMember"),false
-					);
-	}
+	
 }
 
 void USlimeAttributeHelper::UpdateAttribute_Continued()
